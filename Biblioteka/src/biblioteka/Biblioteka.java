@@ -21,14 +21,15 @@ public class Biblioteka implements BibliotekaInterfejs {
 
 	@Override
 	public void obrisiKnjigu(Knjiga knjiga) {
-		// TODO Auto-generated method stub
-
+		if(knjige.contains(knjiga)) {
+			knjige.remove(knjiga);
+		}
+		
 	}
 
 	@Override
 	public List<Knjiga> vratiSveKnjige() {
-		// TODO Auto-generated method stub
-		return null;
+		return knjige;
 	}
 
 	@Override
