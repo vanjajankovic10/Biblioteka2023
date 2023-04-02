@@ -6,13 +6,13 @@ import java.util.List;
 import biblioteka.interfejs.BibliotekaInterfejs;
 
 public class Biblioteka implements BibliotekaInterfejs {
-	List<Knjiga> knjige;
+	List<Knjiga> knjige = new ArrayList<>();
 	@Override
 	public void dodajKnjigu(Knjiga knjiga) {
 		if (knjiga == null)
 			throw new NullPointerException("Knjiga ne sme biti null");
 
-		if (knjige.contains(knjiga))
+		if (knjige != null && knjige.contains(knjiga))
 			throw new IllegalArgumentException("Knjiga je duplikat");
 
 		knjige.add(knjiga);
